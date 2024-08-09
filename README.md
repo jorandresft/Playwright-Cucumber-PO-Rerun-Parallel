@@ -248,7 +248,7 @@ Para ejecutar los casos de prueba, abrir una terminal y copiar el comando
   npm run test
 ```
 
-## Ejecutar Tests
+## Ejecutar Tests Fallidos
 
 Para ejecutar los casos de prueba fallidos (rerun), abrir una terminal y copiar el comando
 
