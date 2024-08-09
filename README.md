@@ -29,7 +29,7 @@ Abrir el proyecto en Visual Studio Code
   code .
 ```
 
-Eliminar la carpeta test y el archivo playwright.config.ts. Abrir una terminal e instalar el paquete de cucumber y ts-node
+Eliminar la carpeta test y el archivo playwright.config.ts. Abrir una terminal e instalar el paquete de cucumber, ts-node, cucumber html reporter y fs-extra
 
 ```bash
   npm i @cucumber/cucumber -D
