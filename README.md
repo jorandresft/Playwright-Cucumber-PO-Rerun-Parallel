@@ -166,7 +166,7 @@ After (async function ({ pickle, result }) {
     console.log(result?.status);
     // Screenshot
     if(result?.status == Status.FAILED) {
-        const img = await pageFixture.page.screenshot({ path: `./test-result/screenshots/${pickle.name}.png`, type: "png"});
+        const img = await pageFixture.page.screenshot({ path: `./test-results/screenshots/${pickle.name}.png`, type: "png"});
         await this.attach(img, "image/png");
     }
 
@@ -176,14 +176,14 @@ After (async function ({ pickle, result }) {
 
 // Screenshot fof step
 AfterStep (async function ({ pickle, result }) {
-    const img = await pageFixture.page.screenshot({ path: `./test-result/screenshots/${pickle.name}.png`, type: "png"});
+    const img = await pageFixture.page.screenshot({ path: `./test-results/screenshots/${pickle.name}.png`, type: "png"});
     await this.attach(img, "image/png");
 })
 */
 
 After (async function ({ pickle }) {
     // Screenshot
-    const img = await pageFixture.page.screenshot({ path: `./test-result/screenshots/${pickle.name}.png`, type: "png"});
+    const img = await pageFixture.page.screenshot({ path: `./test-results/screenshots/${pickle.name}.png`, type: "png"});
     await this.attach(img, "image/png");
     await pageFixture.page.close();
     await context.close();
