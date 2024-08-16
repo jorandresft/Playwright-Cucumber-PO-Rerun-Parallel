@@ -25,6 +25,6 @@ When('Click in login button', async function () {
 });
 
 Then('verify login is success', async function () {
-    const textReceived = await pageFixture.page.locator('//td[text()="Manger Id : mngr584603"]').innerText();
+    const textReceived = await pageFixture.page.locator('//td[text()="Manger Id : mngr58460"]').innerText();
     expect(textReceived).toEqual(textExpected);
 });

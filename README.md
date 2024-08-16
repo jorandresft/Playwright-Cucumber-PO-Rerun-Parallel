@@ -108,8 +108,8 @@ Modificar el archivo package.json en la sesión de scripts
 ```bash
 "scripts": {
     "pretest": "npx ts-node src/helper/init.ts",
-    "test": "cucumber-js test",
-    "report": "npx ts-node src/helper/report.ts",
+    "test": "cucumber-js test || (exit 0)",
+    "posttest": "npx ts-node src/helper/report.ts",
     "test:failed": "cucumber-js -p rerun @rerun.txt"
   },
 ```
@@ -232,7 +232,7 @@ const fs = require ("fs-extra");
 
 try {
     fs.ensureDir("test-results");
-    fs.emtyDir("test-results");
+    fs.emptyDir("test-results");
 } catch (error) {
     console.log ("Folder not created!" + error);
 }
