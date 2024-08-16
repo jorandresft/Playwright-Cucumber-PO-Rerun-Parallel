@@ -110,7 +110,8 @@ Modificar el archivo package.json en la sesión de scripts
     "pretest": "npx ts-node src/helper/init.ts",
     "test": "cucumber-js test || (exit 0)",
     "posttest": "npx ts-node src/helper/report.ts",
-    "test:failed": "cucumber-js -p rerun @rerun.txt"
+    "test:failed": "cucumber-js -p rerun @rerun.txt",
+    "report": "npx ts-node src/helper/report.ts"
   },
 ```
 
